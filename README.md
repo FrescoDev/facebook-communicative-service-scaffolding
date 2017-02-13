@@ -55,7 +55,7 @@ Example: http:/{url}/meta
 Response body:
 
     {
-        "description": "This skeletal applicaiton should serve as a template for developing http services",
+        "description": "This skeletal applicaiton should serve as a template for developing fb messenger application services",
         "version" : "v1",
         "status": "ok"
     }
