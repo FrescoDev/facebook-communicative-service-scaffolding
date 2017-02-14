@@ -7,8 +7,26 @@ import methodOverride from 'method-override';
 import morgan from 'morgan';
 import routes from './routes';
 import settings from './configuration';
+import {Bot, Elements} from 'facebook-messenger-bot';
+require('babel-polyfill');
+
+const bot = new Bot(settings.fb.myPageToken, settings.fb.myVerification);
+
+bot.on('message', async message => {
+    const {sender} = message;
+    await sender.fetch('first_name');
+
+    const out = new Elements();
+    out.add({text: `hey ${sender.first_name}, how are you!`});
+
+    await bot.send(sender.id, out);
+});
+
 
 let app = express();
+
+// Use fb bot framework middleware
+app.use('/facebook', bot.router());
 
 // Adds some security best practices
 app.use(helmet());

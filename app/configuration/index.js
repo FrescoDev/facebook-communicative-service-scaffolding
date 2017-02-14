@@ -15,6 +15,10 @@ const defaultConfig = {
   root: path.normalize(__dirname + '/../../..'),
   port: process.env.PORT || 4567,
   ip: process.env.IP || '0.0.0.0',
+  fb : {
+    myPageToken : 'EAAC8JFyujyoBAJZAKzMoJ4ng1Y4yALUDtgPQ9YHNhvwM1ZBZB6QfswonRlN3O2cwCkNZAgZBHJKQ3RRA8mZCKAhi835kgW7YXeuvJAeahbM9VwQGXrp3DR0rDegP5JKJZBqjTa1wlt16LWTKNxvIlsmDDY2ZBxLBlVSLHxSUtd5AAjQId2y4vOau',
+    myVerificaton : 'demosecret'
+  },
   auth0: {
     secret: 'secret',
     client: 'client',
