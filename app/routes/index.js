@@ -23,7 +23,7 @@ bot.on('message', async message => {
 // Use fb bot framework middleware
 routes.use(`${version}/webhook`, bot.router());
 routes.get(`${version}/meta`, MetaHandler.index);
-routes.get(`${version}/webhook`, WebHookhandler.index);
+//routes.get(`${version}/webhook`, WebHookhandler.index);
 
 
 export default routes;
