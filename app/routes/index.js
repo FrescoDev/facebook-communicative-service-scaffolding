@@ -10,11 +10,6 @@ const bot = new Bot(settings.fb.myPageToken, settings.fb.myVerification);
 const routes = new Router();
 const version = settings.apiVersion;
 
-// Use fb bot framework middleware
-routes.use(`${version}/webhook`, bot.router());
-routes.get(`${version}/meta`, MetaHandler.index);
-routes.get(`${version}/webhook`, WebHookhandler.index);
-
 bot.on('message', async message => {
     const {sender} = message;
     await sender.fetch('first_name');
@@ -24,5 +19,11 @@ bot.on('message', async message => {
 
     await bot.send(sender.id, out);
 });
+
+// Use fb bot framework middleware
+routes.use(`${version}/webhook`, bot.router());
+routes.get(`${version}/meta`, MetaHandler.index);
+routes.get(`${version}/webhook`, WebHookhandler.index);
+
 
 export default routes;
