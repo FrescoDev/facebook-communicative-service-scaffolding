@@ -14,10 +14,6 @@ var _meta = require('../http-request-handlers/meta.handler');
 
 var _meta2 = _interopRequireDefault(_meta);
 
-var _webhook = require('../http-request-handlers/webhook.handler');
-
-var _webhook2 = _interopRequireDefault(_webhook);
-
 var _express = require('express');
 
 var _configuration = require('../configuration');
@@ -71,7 +67,5 @@ bot.on('message', function () {
 // Use fb bot framework middleware
 routes.use(version + '/webhook', bot.router());
 routes.get(version + '/meta', _meta2.default.index);
-//routes.get(`${version}/webhook`, WebHookhandler.index);
-
 
 exports.default = routes;

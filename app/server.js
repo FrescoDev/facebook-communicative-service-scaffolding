@@ -1,4 +1,3 @@
-require('babel-polyfill');
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import errorHandler from 'errorhandler';

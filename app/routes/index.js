@@ -1,6 +1,5 @@
 require('babel-polyfill');
 import MetaHandler from '../http-request-handlers/meta.handler';
-import WebHookhandler from '../http-request-handlers/webhook.handler';
 import {Router} from 'express';
 import settings from '../configuration';
 import {Bot, Elements} from 'facebook-messenger-bot';
@@ -23,7 +22,5 @@ bot.on('message', async message => {
 // Use fb bot framework middleware
 routes.use(`${version}/webhook`, bot.router());
 routes.get(`${version}/meta`, MetaHandler.index);
-//routes.get(`${version}/webhook`, WebHookhandler.index);
-
 
 export default routes;
