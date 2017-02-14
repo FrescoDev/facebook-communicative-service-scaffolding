@@ -1,3 +1,4 @@
+require('babel-polyfill');
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import errorHandler from 'errorhandler';
@@ -7,7 +8,6 @@ import methodOverride from 'method-override';
 import morgan from 'morgan';
 import routes from './routes';
 import settings from './configuration';
-require('babel-polyfill');
 
 let app = express();
 

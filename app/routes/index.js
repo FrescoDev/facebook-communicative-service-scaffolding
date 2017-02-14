@@ -1,9 +1,9 @@
+require('babel-polyfill');
 import MetaHandler from '../http-request-handlers/meta.handler';
 import WebHookhandler from '../http-request-handlers/webhook.handler';
 import {Router} from 'express';
 import settings from '../configuration';
 import {Bot, Elements} from 'facebook-messenger-bot';
-require('babel-polyfill');
 
 const bot = new Bot(settings.fb.myPageToken, settings.fb.myVerification);
 

@@ -44,6 +44,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 require('babel-polyfill');
 
+
 var app = (0, _express2.default)();
 
 // Adds some security best practices
