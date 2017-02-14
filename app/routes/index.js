@@ -11,7 +11,7 @@ const routes = new Router();
 const version = settings.apiVersion;
 
 // Use fb bot framework middleware
-routes.use('/facebook', bot.router());
+routes.use(`${version}/webhook`, bot.router());
 routes.get(`${version}/meta`, MetaHandler.index);
 routes.get(`${version}/webhook`, WebHookhandler.index);
 
