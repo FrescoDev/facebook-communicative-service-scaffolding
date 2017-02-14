@@ -2,6 +2,8 @@
 
 Standard scaffolding for facebook messenger micro service application. (Node, ES6/ES7, Babel)
 
+URL: https://fb-comms-service-scaffolding.herokuapp.com/
+
 [![Build Status](https://travis-ci.org/FrescoDev/facebook-communicative-service-scaffolding.svg?branch=master)](https://travis-ci.org/FrescoDev/facebook-communicative-service-scaffolding)
 
 ### Prerequisities
@@ -31,7 +33,8 @@ Standard scaffolding for facebook messenger micro service application. (Node, ES
 4. Run: ```heroku ps:scale web=1git push heroku master``` to ensure at least one instance of the app is running
 5. Run: ```heroku open``` to visit the app's URL
 6. Run: ```heroku logs``` to view app logs
-7. RunL ```heroku addons:create deployhooks:http --url https://hooks.slack.com/services/{token}``` to add slack deploy hook
+7. Run: ```heroku addons:create deployhooks:http --url https://hooks.slack.com/services/{token}``` to add slack deploy hook
+8. Run: ```heroku apps:rename [newname]``` to rename the app
 
 ## Running the Tests
 
