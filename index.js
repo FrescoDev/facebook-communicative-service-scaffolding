@@ -1,9 +1,8 @@
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+require('babel-register');
 
 if (process.env.NODE_ENV != 'development') {
-    require('babel-register');    
     require('./build/server.js');
 } else {
-    require('babel-register');
     require('./app/server');
 }

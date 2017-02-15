@@ -6,6 +6,7 @@
     "main": "index.js",
     "scripts": {
         "build": "babel app -d build",
+        "postinstall": "npm run build",
         "clean": "rm -rf build && mkdir build",
         "start": "nodemon index.js",
         "test": "mocha --recursive --reporter spec --compilers js:babel-register tests",
